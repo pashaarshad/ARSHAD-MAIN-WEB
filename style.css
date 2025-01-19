@@ -25,7 +25,11 @@ body {
     position: relative;   
 }  */
 
-
+#cv{
+  padding: 0.6vw;
+    
+ 
+}
 header{
     top: 0px;
     height: 100px;
@@ -92,6 +96,7 @@ header nav .navRight{
      
     
     /* border: 1px solid #00ff00; */
+    
     margin-top: 10%;
     margin-left: 2%;
     float: left;
@@ -145,7 +150,7 @@ footer {
 }
 .socialMedia img {
 
-    height: 45px;
+    height: 5vw;
     margin-top: 2.5%;
 
 }
@@ -166,6 +171,7 @@ footer {
  
 
 }
+
 .aboutright img{
     height: 500px;
     width: 350px;
@@ -222,7 +228,7 @@ footer {
     }
     .socialMedia img {
 
-        height: 22px;
+        height: 7vw;
         margin-top: 2.5%;
     
     }
