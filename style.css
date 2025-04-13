@@ -521,15 +521,27 @@ footer {
 /* /* ***********************************************contact me ********************* */
 
 .container {
-    width: 300px;
-    margin: 50px auto;
-    /* background-color: black; */
+    width: 90%;
+    max-width: 300px;
+    margin: 30px auto;
     background-image: url(img/bgok.png);
-    padding: 20px;
-    border-radius: 30px;
+    padding: 15px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-  
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    padding: 12px 30px;
+    font-size: 16px;
+}
 }  /* -------------------------Media END ------********************************** */ 
 
 /*                       CSS FOR SKILLS                        */
