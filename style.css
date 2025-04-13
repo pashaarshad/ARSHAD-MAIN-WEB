@@ -723,70 +723,83 @@ footer {
 
 
 
+  
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Add this to fix input overflow */
+}
 
-     /* contenter *********** */
+/* Rest of the styles remain same */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px var(--arshad-color);
+}
 
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--arshad-color);
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
 
-     .container {
-        max-width: 600px;
-        margin: 50px auto;
-        /* background-color: black; */
-        background-image: url(img/bgok.png);
-        padding: 20px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    .container:hover{
-        box-shadow: 0 0 10px var(--arshad-color);
-    }
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        color:var(--arshad-color);
-        }
-    
-    .field {
-        margin-bottom: 15px;
-    }
-    
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: var(--arshad-color);
-    }
-    
-    input[type="text"], input[type="email"], textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        font-size: 16px;
-    }
-    
-    textarea {
-        height: 150px;
-        resize: vertical;
-    }
-    
-    .submit {
-        text-align: center;
-    }
-    
-    button[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    
-    button[type="submit"]:hover {
-        background-color: var(--arshad-color);
-    }
+.field {
+    margin-bottom: 25px;
+    position: relative;
+}
 
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--arshad-color);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 34px); /* Adjust width accounting for padding and border */
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--arshad-color);
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Add this to include padding in width calculation */
+}
+
+/* Rest of the styles remain same */
+
+button[type="submit"] {
+    background-color: transparent;
+    color: var(--arshad-color);
+    padding: 15px 40px;
+    border: 2px solid var(--arshad-color);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--arshad-color);
+    color: black;
+    box-shadow: 0 0 20px var(--arshad-color);
+    transform: scale(1.05);
+}
 
 
 
