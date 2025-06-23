@@ -681,6 +681,7 @@ button[type="submit"] {
 
 
   /***************************** css for project  ***************************************************/ 
+
 .project1{
     /* border: 1px solid red; */
     height: auto;
@@ -721,7 +722,9 @@ button[type="submit"] {
     margin-bottom: 2%;
     
 }
-
+.project1 h3,h1{
+    text-align: center;
+}
 .projectCon{
    
    
