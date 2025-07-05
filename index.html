@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +6,10 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="shortcut icon" href="img/logoarshad.jpg">
+    <link rel="shotcut icon" href="img/logoarshad.jpg">
 
     <title>ARSHAD Programmer</title>
 </head>
@@ -16,8 +17,7 @@
   body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
-      min-height: 100vh;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
   }
 
   .video-background {
@@ -39,34 +39,21 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      object-fit: cover;
   }
 
-  .main-content {
-      min-height: 100vh; /* Changed from calc(100vh - 200px) */
+  .content {
       position: relative;
       z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  }
-  
-  @media (max-width: 768px) {
-      .video-background video {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-      }
-      
-      .main-content {
-          min-height: 100vh; /* Changed from calc(100vh - 150px) */
-      }
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      padding: 50px;
   }
 </style>
 
 <body class="indexBody">
   <div class="video-background">
-    <video autoplay muted loop id="video1">
+    <video autoplay muted id="video1">
         <source src="vedio/vedio1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -75,58 +62,10 @@
         Your browser does not support the video tag.
     </video>
 </div>
-
-<div class="main-content">
-    <header>
-        <nav> 
-            <div class="navLeft">
-                <div class="logo">
-                    <img src="img/logoarshad.jpg" alt="LOGO">
-                </div>
-            </div>
-            
-            <span class="menuBtn" onclick="openMenu()">&#9776;</span>
-            <span class="closeBtn" onclick="closeMenu()" style="display: none;">&#10005;</span>
-
-            <div class="navRight">
-                <ul id="menu">
-                    <li><a class='active' href='index.html'>HOME</a></li>
-                    <li><a href='a/about.html'>ABOUT</a></li>
-                    <li><a href='a/skills.html'>SKILLS</a></li>
-                    <li><a href='a/project.html'>PROJECTS</a></li>
-                    <li><a href='a/contact.html'>CONTACT</a></li>
-                </ul>
-            </div> 
-        </nav>
-    </header>
-
-    <main class="main-section">
-        <div class="bodyLeft">
-            <h1 class="bodyLeftH1">
-                HI, <br>
-                I Am <span class="coloringArshad">Arshad Pasha</span> <br>
-                <span class="auto-type"></span>
-            </h1> 
-
-            <div class="socialMedia">
-                <a href="https://wa.me/+917760554350" target="_blank">    
-                    <img src="img/logow.png" alt="WhatsApp">
-                </a>
-                <a href="https://www.instagram.com/arshadpasha65?igsh=MWs1YnQyOXdpZzd1eQ==" target="_blank">
-                    <img src="img/logoi.webp" alt="INSTA">
-                </a>
-                <a class="big_img" href="https://drive.google.com/file/d/12TTJEa4DwkH0eXqEWjweE7JztoTLp0S2/view" target="_blank">
-                    <img src="img/cv_img.png" alt="CV">
-                </a>
-            </div>
-        </div>
-
-        <div class="bodyRight">
-            <img src="img/logoarshad.jpg" alt="LOGO">
-        </div>
-    </main>
-</div>
-
+<!-- <div class="content">
+    <p>Your text content goes here. This will scroll along with the page.</p>
+    <p>It can be multiple lines.</p>
+</div> -->
 <script>
     var video1 = document.getElementById('video1');
     var video2 = document.getElementById('video2');
@@ -142,78 +81,131 @@
     video2.addEventListener('ended', function() {
         video2.play();
     });
-    
-    // Mobile menu functions
-    function openMenu() {
-        const menu = document.getElementById('menu');
-        const navRight = document.querySelector('.navRight');
-        const menuBtn = document.querySelector('.menuBtn');
-        const closeBtn = document.querySelector('.closeBtn');
-        
-        // Show the navigation container and menu
-        navRight.style.display = 'block';
-        menu.style.display = 'flex';
-        
-        // Toggle buttons
-        menuBtn.style.display = 'none';
-        closeBtn.style.display = 'block';
-    }
-    
-    function closeMenu() {
-        const menu = document.getElementById('menu');
-        const navRight = document.querySelector('.navRight');
-        const menuBtn = document.querySelector('.menuBtn');
-        const closeBtn = document.querySelector('.closeBtn');
-        
-        // Hide the navigation container and menu
-        navRight.style.display = 'none';
-        menu.style.display = 'none';
-        
-        // Toggle buttons
-        menuBtn.style.display = 'block';
-        closeBtn.style.display = 'none';
-    }
-    
-    // Close menu when clicking on a link (for mobile)
-    document.querySelectorAll('#menu a').forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-    
-    // Close menu when clicking outside (for mobile)
-    document.addEventListener('click', function(event) {
-        const navRight = document.querySelector('.navRight');
-        const menuBtn = document.querySelector('.menuBtn');
-        const closeBtn = document.querySelector('.closeBtn');
-        
-        if (!navRight.contains(event.target) && !menuBtn.contains(event.target) && !closeBtn.contains(event.target)) {
-            closeMenu();
-        }
-    });
 </script>
+    <header>
+        <nav> 
+            
+            <div class="navLeft">
 
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="unpkg.com/boxicons%402.1.4/dist/boxicons.html"></script>
-<script>
-  var typed = new Typed(".auto-type", {
-    strings: ['ARSHAD PASHA', 'RPA Developer', 'Web Developer', "C / C++ Programmer"],
-    typeSpeed: 100,
-    backSpeed: 40,
-    loop: true,
-  })
-</script>
+                <div class="logo">
+                    <img src="img/logoarshad.jpg" alt="LOGO">
+                 </div>
 
-<footer>
+
+            </div>
+            <span class="menuBtn" onclick="openMenu()"> &#9776</span>
+            <span class="closeBtn" onclick="closeMenu()"> &#9776</span>
+
+            <div class="navRight">
+             
+             
+                <ul id="menu">
+                    <li> <a class='active' href='index.html'> HOME </a></li>
+                    <li> <a href='a/about.html'> ABOUT </a></li>
+                    <li> <a href='a/skills.html'> SKILLS </a></li>
+                    <li> <a href='a/project.html'> PROJECTS </a></li>
+                    <li> <a href='a/contact.html'> CONTACT  </a></li>
+                    
+                </ul>
+
+             
+
+ 
+            </div> 
+
+           
+            
+         
+        </nav>
+
+        </header>
+
+       
+
+
+      <div class="bodyLeft">
+
+        <h1 class="bodyLeftH1">
+            HI, <br>
+            I Am  <span class="coloringArshad">   Arshad Pasha  </span>  <br>
+            <span class="auto-type">
+
+        </h1> 
+
+
+         <div class="socialMedia">
+          
+            <a href="https://wa.me/+917760554350"  target="_blank">    
+                  <img src="img/logow.png" alt="WhatsApp">  &nbsp; &nbsp; &nbsp;&nbsp; 
+                  </a>
+
+
+
+                  <a href="https://www.instagram.com/arshadpasha65?igsh=MWs1YnQyOXdpZzd1eQ==" target="_blank" >&nbsp; &nbsp; &nbsp;&nbsp;
+                    
+                    <img src="img/logoi.webp" alt="INSTA"> </a>
+
+                    <a class="big_img" href="https://drive.google.com/file/d/12TTJEa4DwkH0eXqEWjweE7JztoTLp0S2/view" target="_blank" >&nbsp; &nbsp; &nbsp;&nbsp;
+                    
+                        <img src="img/cv_img.png" alt="CV"></a>
+
+               
+                        
+               
+
+
+          
+
+
+         </div>
+  
+
+      </div>
+
+  
+
+       
+       <div class="bodyRight">
+
+        <img src="img/logoarshad.jpg" alt="LOGO">
+
+
+       </div>
+
+
+   
+      
+      <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="unpkg.com/boxicons%402.1.4/dist/boxicons.html"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: [, 'ARSHAD PASHA', ' RPA Developer',' Web Developer', "C / C++  Programmer"],
+        typeSpeed: 100,
+        backSpeed: 40,
+        loop: true,
+      })
+    </script>
+
+<footer >
     <hr>
     <br>
+    
     <div class="footer">
-        <h1>ARSHAD PASHA</h1>
-        <h2>Copyright © 2024 ArshadPasha.netlify.app</h2>
-        <div class="conter">
-            <img src="https://hitwebcounter.com/counter/counter.php?page=10964565&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="Counter Widget" Alt="Visit counter For Websites" border="0" />     
-        </div>
+      <h1> ARSHAD PASHA </h1>
+            <h2> Copyright © 2024 ArshadPasha.netlify.app</h2>
+
+            <div class="conter">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=10964565&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" />     
+              </div>
     </div>
-</footer>
+
+
+  </footer>
+
 
 </body>
+
+<!-- Mirrored from arshadpasha.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 21:03:37 GMT -->
 </html>
