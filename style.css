@@ -91,6 +91,7 @@ header nav .navRight{
 }
 .bodyLeftH1{
     color: #ffff;
+    
 }
 
 .bodyLeft {
@@ -106,6 +107,11 @@ header nav .navRight{
 
     font-size: 55px;
 
+}
+
+.fix-box-size {
+    width: 40vw;
+    height: auto;
 }
 
 
