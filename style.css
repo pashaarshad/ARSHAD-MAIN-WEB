@@ -254,23 +254,31 @@ footer {
      
     
         /* border: 1px solid #00ff00; */
-        margin-top: 30%;
-        margin-left: 2%;
+        margin-top: 10%;
+        margin: 2%;
         
     }
 
-    
-    
+    .socialMedia{
+        margin-left: 10vw;
+    }
+    .bodyRight{
+        margin-top: 0% ;
+        margin-right: 16vw;
+    }
     .bodyRight img{
 
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
+        margin : 2vw;
+        height: 250px;
+        width: 250px;
+        border-radius: 9%;
 
         
-       
-       
     
+    }
+    .fix-box-size{
+        width: 90vw;
+        height: auto;
     }
 
     .footer h1,h2{
