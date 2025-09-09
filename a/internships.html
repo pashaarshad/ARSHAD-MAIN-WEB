@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="shortcut icon" href="../img/aplogo.png">
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <title>ARSHAD Programmer - Internships</title>
+</head>
+
+<body class="internshipsBody">
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="../vedio/bestvedio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.keyCode === 49) { // '1' key pressed
+                var video = document.querySelector('video');
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+        });
+    </script>
+
+    <header>
+        <nav>
+            <div class="navLeft">
+                <div class="logo">
+                    <img src="../img/logoarshad.jpg" alt="LOGO">
+                </div>
+            </div>
+            <span class="menuBtn" onclick="openMenu()"> &#9776</span>
+            <span class="closeBtn" onclick="closeMenu()"> &#9776</span>
+
+            <div class="navRight">
+                <ul id="menu">
+                    <li> <a href='../index.html'> HOME </a></li>
+                    <li> <a href='about.html'> ABOUT </a></li>
+                    <li> <a href='skills.html'> SKILLS </a></li>
+                    <li> <a href='project.html'> PROJECTS </a></li>
+                    <li> <a href='certificates.html'> CERTIFICATES </a></li>
+                    <li> <a class='active' href='internships.html'> INTERNSHIPS </a></li>
+                    <li> <a href='contact.html'> CONTACT </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="internshipsCon">
+        <div class="internshipsHeader">
+            <h1>My Internships</h1>
+            <p>Professional internship programs and certifications I have completed</p>
+        </div>
+
+        <div class="internshipsGrid">
+            <!-- Internships will be dynamically loaded here by internships.js -->
+            <div class="loadingMessage">
+                <div class="loading-spinner"></div>
+                <p>Loading internships...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for viewing internships -->
+    <div id="internshipModal" class="modal">
+        <div class="modalContent">
+            <span class="closeModal" onclick="closeInternshipModal()">&times;</span>
+            <div class="modalLoader">
+                <div class="loading-spinner"></div>
+                <p>Loading Internship Certificate...</p>
+            </div>
+            <div class="modalInternshipInfo">
+                <h3 id="modalInternshipTitle"></h3>
+                <p id="modalInternshipOrg"></p>
+                <p id="modalInternshipDate"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="internships.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="../unpkg.com/boxicons%402.1.4/dist/boxicons.html"></script>
+
+    <footer>
+        <hr>
+        <br>
+        <div class="footer">
+            <h1> ARSHAD PASHA </h1>
+            <h2> Copyright © 2025 ArshadPasha Website</h2>
+            <div class="conter">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=10964565&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0"
+                    title="Counter Widget" Alt="Visit counter For Websites" border="0" />
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

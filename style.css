@@ -873,3 +873,627 @@ button[type="submit"]:hover {
         font-size: 24px;
         padding: 50px;
     }
+
+/* ============================================= Certificates Page Styles */
+.certificatesBody {
+    background-image: url(img/bgok.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ============================================= Internships Page Styles */
+.internshipsBody {
+    background-image: url(img/bgok.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+.internshipsCon {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.internshipsHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.internshipsHeader h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.internshipsHeader p {
+    color: #ccc;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.internshipsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.internshipCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--project-cards-boder-color);
+}
+
+.internshipCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 255, 0, 0.3);
+}
+
+.internshipImageContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.internshipCanvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.internshipCanvas.landscape {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.internshipCanvas.portrait {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.internshipCard:hover .internshipCanvas {
+    transform: scale(1.05);
+}
+
+.internshipOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.internshipCard:hover .internshipOverlay {
+    opacity: 1;
+}
+
+.internshipOverlayContent {
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.internshipOverlayContent h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--arshad-color);
+    line-height: 1.2;
+}
+
+.internshipOverlayContent p {
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.internshipDesc {
+    font-style: italic;
+    color: #ccc !important;
+    margin-bottom: 12px !important;
+    font-size: 0.8rem !important;
+}
+
+.ongoingBadge {
+    color: var(--arshad-color) !important;
+    font-weight: bold !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 10px !important;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.viewInternship {
+    background: var(--arshad-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.viewInternship:hover {
+    background: #00cc00;
+}
+
+.internshipLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+.internshipPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.internshipPlaceholder:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.internshipError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ff6b6b;
+    text-align: center;
+    padding: 20px;
+}
+
+.downloadInternship {
+    background: var(--arshad-color);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.downloadInternship:hover {
+    background: #00cc00;
+}
+
+.certificatesCon {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificatesHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.certificatesHeader h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.certificatesHeader p {
+    color: #ccc;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.certificatesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.certificateCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--project-cards-boder-color);
+}
+
+.certificateCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 255, 0, 0.3);
+}
+
+.certificateImageContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.certificateImage, .certificateCanvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.certificateCanvas.landscape {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.certificateCanvas.portrait {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.certificateLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+.loading-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid var(--arshad-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.certificatePlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.certificatePlaceholder:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.placeholderContent {
+    text-align: center;
+}
+
+.pdf-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.certificateError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #ff6b6b;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-card {
+    border-color: #ff6b6b !important;
+}
+
+.loadingMessage {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.certificateCard:hover .certificateImage {
+    transform: scale(1.05);
+}
+
+.certificateOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificateCard:hover .certificateOverlay {
+    opacity: 1;
+}
+
+.certificateOverlayContent {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.certificateOverlayContent h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--arshad-color);
+}
+
+.certificateOverlayContent p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.viewCertificate {
+    background: var(--arshad-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.viewCertificate:hover {
+    background: #00cc00;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalContent {
+    position: relative;
+    margin: auto;
+    padding: 60px 20px 20px 20px;
+    width: 90%;
+    max-width: 800px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.closeModal:hover {
+    color: var(--arshad-color);
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+#modalCertificateImage, .modalCertificateImage {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.modalLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: #fff;
+}
+
+.modalFallback, .modalError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.viewPdfButton, .downloadCertificate {
+    background: var(--arshad-color);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.viewPdfButton:hover, .downloadCertificate:hover {
+    background: #00cc00;
+}
+
+.modalCertificateInfo {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.modalCertificateInfo h3 {
+    color: var(--arshad-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.modalCertificateInfo p {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design for Certificates */
+@media (max-width: 768px) {
+    .certificatesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .certificatesHeader h1 {
+        font-size: 2rem;
+    }
+    
+    .certificatesHeader p {
+        font-size: 1rem;
+    }
+    
+    .certificateImageContainer {
+        height: 250px;
+    }
+    
+    .certificateOverlayContent h3 {
+        font-size: 1.2rem;
+    }
+    
+    .modalContent {
+        width: 95%;
+        padding: 50px 10px 10px 10px;
+        max-height: 95vh;
+    }
+    
+    .closeModal {
+        top: 5px;
+        right: 15px;
+        font-size: 28px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .modalCertificateInfo h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Internships Responsive */
+    .internshipsGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .internshipsHeader h1 {
+        font-size: 2rem;
+    }
+    
+    .internshipsHeader p {
+        font-size: 1rem;
+    }
+    
+    .internshipImageContainer {
+        height: 250px;
+    }
+    
+    .internshipOverlayContent h3 {
+        font-size: 1.2rem;
+    }
+    
+    .internshipOverlayContent p {
+        font-size: 0.8rem;
+    }
+}
