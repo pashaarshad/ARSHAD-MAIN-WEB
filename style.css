@@ -1069,11 +1069,12 @@ button[type="submit"]:hover {
 .formGroup textarea {
     width: 100%;
     padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     color: #000;
     font-size: 1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     box-sizing: border-box;
@@ -1086,8 +1087,9 @@ button[type="submit"]:hover {
     outline: none;
     border-color: var(--arshad-color);
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.95);
     color: #000;
+    font-weight: 500;
 }
 
 .formGroup input::placeholder,
