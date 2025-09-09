@@ -874,7 +874,425 @@ button[type="submit"]:hover {
         padding: 50px;
     }
 
-/* ============================================= Certificates Page Styles */
+/* ============================================= Advanced Contact Page Styles */
+.contactPageContainer {
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.contactHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contactHeader h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, var(--arshad-color), #00cc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contactHeader p {
+    color: #ccc;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.contactMainContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Contact Info Section */
+.contactInfoSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contactCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.contactCard:hover::before {
+    left: 100%;
+}
+
+.contactCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 255, 0, 0.2);
+    border-color: var(--arshad-color);
+}
+
+.contactCardIcon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.contact-logo {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(1) brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.contactCard:hover .contact-icon,
+.contactCard:hover .contact-logo {
+    filter: grayscale(0) brightness(1);
+}
+
+.contactCard h3 {
+    color: var(--arshad-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contactCard p {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.contactLink {
+    display: inline-block;
+    background: var(--arshad-color);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contactLink:hover {
+    background: #00cc00;
+    transform: scale(1.05);
+}
+
+.statusBadge {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--arshad-color), #00cc00);
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+/* Form Section */
+.contactFormSection {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    padding: 40px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(0, 255, 0, 0.2);
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formHeader h2 {
+    color: var(--arshad-color);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.formHeader p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.advancedContactForm {
+    max-width: 100%;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.formGroup label {
+    display: block;
+    color: var(--arshad-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #000;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    text-shadow: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--arshad-color);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    background: rgba(255, 255, 255, 0.25);
+    color: #000;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: #555;
+    opacity: 0.8;
+}
+
+.formGroup textarea {
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+.formGroup select option {
+    background: #fff;
+    color: #000;
+}
+
+.formFocus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, var(--arshad-color), #00cc00);
+    transition: width 0.3s ease;
+}
+
+.formGroup input:focus + .formFocus,
+.formGroup select:focus + .formFocus,
+.formGroup textarea:focus + .formFocus {
+    width: 100%;
+}
+
+.messageGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.formCheckbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.formCheckbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--arshad-color);
+}
+
+.formCheckbox label {
+    color: #ccc;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.formSubmit {
+    text-align: center;
+}
+
+.submitButton {
+    background: linear-gradient(45deg, var(--arshad-color), #00cc00);
+    color: #000;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    text-shadow: none;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+}
+
+.submitButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.submitButton:hover::before {
+    left: 100%;
+}
+
+.submitButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.5);
+    background: linear-gradient(45deg, #00ff00, #00dd00);
+}
+
+.buttonIcon {
+    transition: transform 0.3s ease;
+}
+
+.submitButton:hover .buttonIcon {
+    transform: translateX(5px);
+}
+
+.submitNote {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* CTA Section */
+.ctaSection {
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 200, 0, 0.1));
+    border-radius: 25px;
+    padding: 60px 40px;
+    text-align: center;
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaSection::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.ctaContent {
+    position: relative;
+    z-index: 1;
+}
+
+.ctaContent h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.ctaContent p {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ctaButton {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ctaButton.primary {
+    background: var(--arshad-color);
+    color: #000;
+}
+
+.ctaButton.primary:hover {
+    background: #00cc00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 255, 0, 0.4);
+}
+
+.ctaButton.secondary {
+    background: transparent;
+    color: var(--arshad-color);
+    border: 2px solid var(--arshad-color);
+}
+
+.ctaButton.secondary:hover {
+    background: var(--arshad-color);
+    color: #000;
+    transform: translateY(-3px);
+}
 .certificatesBody {
     background-image: url(img/bgok.png);
     background-size: cover;
@@ -1134,6 +1552,140 @@ button[type="submit"]:hover {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
     margin-top: 30px;
+}
+
+/* Certificate Sections */
+.certificateSection {
+    margin-bottom: 60px;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+    color: var(--arshad-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.sectionHeader p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.sectionDivider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--arshad-color), #00cc00);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.sectionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Simple Certificate Cards (no overlay text) */
+.simpleCard .certificateImageContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.simpleCard .certificateImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.simpleCard:hover .certificateImage {
+    transform: scale(1.05);
+}
+
+.certificateSimpleOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.simpleCard:hover .certificateSimpleOverlay {
+    opacity: 1;
+}
+
+.viewCertificateSimple {
+    background: var(--arshad-color);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.viewCertificateSimple:hover {
+    background: #00cc00;
+    transform: scale(1.05);
+}
+
+/* Special Certificate Cards (with custom text) */
+.specialCard .certificateOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.specialCard:hover .certificateOverlay {
+    opacity: 1;
+}
+
+.specialCard .certificateOverlayContent {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.specialCard .certificateOverlayContent h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--arshad-color);
+}
+
+.specialCard .certificateOverlayContent p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .certificateCard {
@@ -1437,6 +1989,11 @@ button[type="submit"]:hover {
         gap: 20px;
     }
     
+    .sectionGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
     .certificatesHeader h1 {
         font-size: 2rem;
     }
@@ -1445,11 +2002,21 @@ button[type="submit"]:hover {
         font-size: 1rem;
     }
     
-    .certificateImageContainer {
+    .sectionHeader h2 {
+        font-size: 2rem;
+    }
+    
+    .sectionHeader p {
+        font-size: 1rem;
+    }
+    
+    .certificateImageContainer,
+    .simpleCard .certificateImageContainer {
         height: 250px;
     }
     
-    .certificateOverlayContent h3 {
+    .certificateOverlayContent h3,
+    .specialCard .certificateOverlayContent h3 {
         font-size: 1.2rem;
     }
     
@@ -1495,5 +2062,146 @@ button[type="submit"]:hover {
     
     .internshipOverlayContent p {
         font-size: 0.8rem;
+    }
+
+    /* Contact Page Responsive */
+    .contactHeader h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contactHeader p {
+        font-size: 1.1rem;
+    }
+    
+    .contactMainContent {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contactInfoSection {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contactCard {
+        padding: 20px;
+    }
+    
+    .contactFormSection {
+        padding: 25px;
+    }
+    
+    .formRow {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .formHeader h2 {
+        font-size: 1.8rem;
+    }
+    
+    .formHeader p {
+        font-size: 1rem;
+    }
+    
+    .ctaSection {
+        padding: 40px 20px;
+    }
+    
+    .ctaContent h2 {
+        font-size: 2rem;
+    }
+    
+    .ctaContent p {
+        font-size: 1rem;
+    }
+    
+    .ctaButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ctaButton {
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+/* ============================================= PDF Canvas Styles */
+.certificateCanvas {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modalCertificateCanvas {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.pdfContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.pdfControls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.pdfControls button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pdfControls button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.pdfControls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#pageInfo {
+    color: #333;
+    font-weight: 500;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Responsive PDF Styles */
+@media (max-width: 768px) {
+    .modalCertificateCanvas {
+        max-width: 95%;
+    }
+    
+    .pdfControls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .pdfControls button {
+        width: 100px;
     }
 }

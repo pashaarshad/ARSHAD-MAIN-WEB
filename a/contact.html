@@ -83,28 +83,164 @@
 
     <!-- main code  -->
 
-    <section class="us">
-        <div class="container">
-          <h1>Leave a Comment</h1>
-          <form action='#' method='post' name='ok'><input type='hidden' name='form-name' value='ok' />
-              <div class="field">
-                  <label for="name">Full Name:</label>
-                  <input type="text" id="name" name="name" required>
-              </div>
-              <div class="field">
-                  <label for="email">Email :</label>
-                  <input type="email" id="email" name="email" required>
-              </div>
-              <div class="field">
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" required></textarea>
-              </div>
-              <div class="submit">
-                  <button type="submit">Submit Comment</button>
-              </div>
-          </form>
-      </div>
-      </section>
+    <div class="contactPageContainer">
+        <div class="contactHeader">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss your next project or just say hello!</p>
+        </div>
+
+        <div class="contactMainContent">
+            <!-- Contact Information Section -->
+            <div class="contactInfoSection">
+                <div class="contactCard">
+                    <div class="contactCardIcon">
+                        <i class="contact-icon">📧</i>
+                    </div>
+                    <h3>Email Me</h3>
+                    <p>arshadpashaintern@gmail.com</p>
+                    <a href="mailto:arshadpashaintern@gmail.com" class="contactLink">Send Email</a>
+                </div>
+
+                <div class="contactCard">
+                    <div class="contactCardIcon">
+                        <i class="contact-icon">💼</i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally</p>
+                    <a href="https://linkedin.com/in/arshad-pasha" target="_blank" class="contactLink">Connect</a>
+                </div>
+
+                <div class="contactCard">
+                    <div class="contactCardIcon">
+                        <img src="../img/github.png" alt="GitHub" class="contact-logo">
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my projects</p>
+                    <a href="https://github.com/pashaarshad" target="_blank" class="contactLink">View Profile</a>
+                </div>
+
+                <div class="contactCard">
+                    <div class="contactCardIcon">
+                        <i class="contact-icon">📱</i>
+                    </div>
+                    <h3>Quick Response</h3>
+                    <p>I typically respond within 24 hours</p>
+                    <span class="statusBadge">Available for projects</span>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="contactFormSection">
+                <div class="formContainer">
+                    <div class="formHeader">
+                        <h2>Send Me a Message</h2>
+                        <p>Whether you have a project in mind, want to collaborate, or just want to say hi, I'd love to hear from you!</p>
+                    </div>
+
+                    <form action='#' method='post' name='contactForm' class="advancedContactForm">
+                        <input type='hidden' name='form-name' value='contactForm' />
+                        
+                        <div class="formRow">
+                            <div class="formGroup">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="formFocus"></span>
+                            </div>
+                            <div class="formGroup">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="formFocus"></span>
+                            </div>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="formFocus"></span>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="company">Company / Organization</label>
+                            <input type="text" id="company" name="company">
+                            <span class="formFocus"></span>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" name="projectType">
+                                <option value="">Select a project type</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="full-stack">Full Stack Development</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                                <option value="consultation">Technical Consultation</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="formFocus"></span>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="budget">Project Budget (Optional)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-1000">Under $1,000</option>
+                                <option value="1000-5000">$1,000 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000-plus">$10,000+</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                            <span class="formFocus"></span>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="timeline">Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="2-3-months">2-3 months</option>
+                                <option value="3-6-months">3-6 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                            <span class="formFocus"></span>
+                        </div>
+
+                        <div class="formGroup messageGroup">
+                            <label for="message">Project Details / Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project, goals, requirements, or just say hello!"></textarea>
+                            <span class="formFocus"></span>
+                        </div>
+
+                        <div class="formCheckbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to my newsletter for tech updates and project showcases</label>
+                        </div>
+
+                        <div class="formSubmit">
+                            <button type="submit" class="submitButton">
+                                <span class="buttonText">Send Message</span>
+                                <span class="buttonIcon">→</span>
+                            </button>
+                            <p class="submitNote">I'll get back to you within 24 hours!</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="ctaSection">
+            <div class="ctaContent">
+                <h2>Ready to Start Something Amazing?</h2>
+                <p>Let's turn your ideas into reality. I'm here to help bring your vision to life with cutting-edge technology and creative solutions.</p>
+                <div class="ctaButtons">
+                    <a href="mailto:arshadpashaintern@gmail.com" class="ctaButton primary">Start a Project</a>
+                    <a href="project.html" class="ctaButton secondary">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
               
