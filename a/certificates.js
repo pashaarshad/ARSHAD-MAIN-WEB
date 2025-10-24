@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Organized certificate sections
 const certificateSections = {
+    professional: {
+        title: "Professional Certifications",
+        description: "Oracle Cloud Infrastructure and AI professional certifications",
+        files: [
+            'AI Foundations Associate.pdf',
+            'Data Science Professional.pdf',
+            'Generative AI Professional_arshad.pdf'
+        ],
+        folder: 'main_professional_certifications'
+    },
     hackathons: {
         title: "Hackathon Certificates",
         description: "Programming competitions and hackathon achievements",
@@ -84,7 +94,7 @@ async function loadCertificateSections() {
     certificatesGrid.style.gap = '50px';
 
     // Load sections in the specified order
-    const sectionOrder = ['hackathons', 'other', 'courses', 'college'];
+    const sectionOrder = ['professional', 'hackathons', 'other', 'courses', 'college'];
     
     for (const sectionKey of sectionOrder) {
         const section = certificateSections[sectionKey];
@@ -219,9 +229,9 @@ async function createSpecialCertificateCard(fileInfo, folder, index) {
 
 // Helper function to get current section key
 function getCurrentSectionKey() {
-    const sectionOrder = ['hackathons', 'other', 'courses', 'college'];
+    const sectionOrder = ['professional', 'hackathons', 'other', 'courses', 'college'];
     const sections = document.querySelectorAll('.certificateSection');
-    return sectionOrder[sections.length - 1] || 'hackathons';
+    return sectionOrder[sections.length - 1] || 'professional';
 }
 
 // Helper functions for image loading
