@@ -12,7 +12,10 @@ const certificateSections = {
         files: [
             'AI Foundations Associate.pdf',
             'Data Science Professional.pdf',
-            'Generative AI Professional_arshad.pdf'
+            'Generative AI Professional_arshad.pdf',
+            'Oracle AI Vector Search Certified Professional_arshad.pdf',
+            'arshad_Oracle Cloud Infrastructure 2025 Certified Multicloud Architect Professional.pdf',
+            'arshad_Oracle Cloud Infrastructure 2025 Certified DevOps Professional.pdf'
         ],
         folder: 'main_professional_certifications'
     },
